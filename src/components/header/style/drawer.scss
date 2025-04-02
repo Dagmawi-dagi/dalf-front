@@ -1,0 +1,56 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+
+.drawer{
+  position: relative;
+  width: 100%;
+  user-select: none;
+  
+  & .drawer-content{
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.drawer-toggler{
+    @include transition($prop: onlytheme);
+    @include flexbox;
+
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+    height: 1rem;
+    width: 100px;
+    background-color: var(--white);
+    color: var(--text-dark-gray);
+    border-radius:  0 0 5px 5px;
+    
+    cursor: pointer;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px 1px;
+    & svg{
+      height: inherit;
+    }
+
+  }
+
+  .tabsContainer{
+    @include flexbox( $justify-content: space-evenly );
+    width: 100%;
+    // background-color: red;
+  
+    .tab{
+      display: inline;
+      color: var(--text-light-gray);
+      font-weight: 500;
+      font-size: 90%;
+  
+      border-bottom: 2px solid var(--brand-dark-red);
+      
+      outline: none;
+      
+      cursor: pointer;
+    }
+  }

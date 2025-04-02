@@ -1,0 +1,46 @@
+@import './../../../style/variables';
+@import '../../../style/mixins';
+
+.chooseFile-container{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark-gray);
+}
+
+button{
+  @include transition($prop:( border :0.2s ));
+  border-radius: 3px;
+  border: 1px solid $border-light;
+  background-color: #fff;
+  color:var(--text-light-gray);
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 1rem;
+
+  // outline: none;
+  cursor: pointer;
+
+  &:focus{
+    @include focus-01($lighten:40);
+  }
+}
+
+.err{
+  position: absolute;
+  top: 0.8rem;
+  display: block;
+  color: tomato;
+}
+
+.fileName{
+  @include transition($prop:( border :0.2s ));
+  border: 1px solid var(--text-dark-gray);
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-style: italic;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}

@@ -1,0 +1,36 @@
+.inputContainer{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.custom-radio-container {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.custom-radio-container input[type="radio"]{
+  display: none;
+}
+
+.custom-radio-container label::before {
+  content: "";
+  color: #fff;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  vertical-align: bottom;
+  transition:all .2s;
+}
+
+input[type="radio"]:checked + label::before{
+  background-color: tomato;
+  border: 3px solid #FFF;
+  outline: 1px solid tomato;
+  transition:all .2s;
+}
