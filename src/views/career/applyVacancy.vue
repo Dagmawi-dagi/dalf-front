@@ -14,7 +14,7 @@ const props =  defineProps({ vacancy: Object })
 
 function applyVacancy (FD, form$){ 
     const formData = new FormData()
-    formData.append('vacancy_id', props.vacancy._id)
+    formData.append('vacancyId', props.vacancy.id)
     form$.data.uploaded_files.forEach(file => { formData.append("uploaded_files", file)});
     formData.append('application_form', JSON.stringify({ 
         gender: form$.data.gender,
@@ -36,7 +36,7 @@ function applyVacancy (FD, form$){
                 <div class="job-discriptions">
                     <h5 class="dis">Position: <span class="value"> {{ vacancy.position_name }} </span> </h5>
                     <h5 class="dis">company: <span class="value"> {{ vacancy.company }} </span> </h5>
-                    <h5 class="dis">location: <span class="value"> {{ vacancy.locations.join() }} </span> </h5>
+                    <h5 class="dis">location: <span class="value"> {{ JSON.parse(vacancy.locations).join() }} </span> </h5>
                     <h5 class="dis">deadline: <span class="value"> {{ format(new Date(vacancy.deadline), 'MMMM dd,yyyy')
                             }} </span> </h5>
                     <h5 class="dis">salary: <span class="value"> {{ vacancy.salary }} </span> </h5>
