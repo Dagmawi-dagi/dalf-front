@@ -1,19 +1,45 @@
 <script setup>
 // assets
 import { products } from '../../assets/site_info_ref';
+// components
+import spinner_ from '../Reusable/spinner_.vue'
 // vue router 
 import { RouterLink } from 'vue-router';
 //store
 import { use_util_store } from '../../stores/util-store';
+import { use_apicalls_from_store } from '../../composables/store-apicalls';
 import { storeToRefs } from 'pinia';
+// vue
+import { ref } from 'vue';
 
 const { any_open_modal } = storeToRefs( use_util_store() )
-
+const { apicall_from_store,apicall_from_store_loading } = use_apicalls_from_store()
 const openProductModal = (product)=>{
     any_open_modal.value.bool = true
     any_open_modal.value.id = 'productModal'
     any_open_modal.value.AnythingTopass = product
 }
+
+
+const showSuccMsg = ref(false)
+const errMsg = ref(false)
+const email = ref()
+const subscribe = ()=>{
+  const obj = {
+    name :email.value.split('@')[0] || '',
+    email: email.value
+  } 
+
+  showSuccMsg.value = false
+  errMsg.value = false
+  apicall_from_store('newsletter','newsletter-subscribe',{ onSucSaveTheJsonOn: 'subscriber', data:obj }).then(res=>{
+    if(res.data.status === "success") return showSuccMsg.value = true
+    showSuccMsg.value = false
+    errMsg.value = res.data.errMessage
+  })
+}
+
+
 </script>
 
 <template>
@@ -33,18 +59,49 @@ const openProductModal = (product)=>{
 
                 <!-- Subscribe Form -->
                 <div class="newsletter-form-container">
-                    <form class="newsletter-form">
+                    <div class="newsletter-form">
                         <input 
-                            type="email"
+                            type="text"
                             placeholder="Enter your email"
                             class="newsletter-input"
+                            v-model="email"
                         />
-                        <button class="newsletter-button">
+                        <button class="newsletter-button" @click="subscribe">
                             <!-- Background dots layers -->
                             <div class="dots-pattern"></div>
-                            Subscribe
+                            <spinner_ :color="'red'" :width="'1rem'" style="margin: auto;" v-if="apicall_from_store_loading"/>
+                          <span v-if="!apicall_from_store_loading">Subscribe</span>  
                         </button>
-                    </form>
+                    </div>
+                    <!-- Success message -->
+                    <div class="message success-message" v-if="!apicall_from_store_loading && showSuccMsg && !errMsg">
+                        <div class="message-icon success-icon">
+                        <!-- Check Circle SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        </div>
+                        <div class="message-text success-text">
+                        <h4>Subscription Successful!</h4>
+                        <p>Please check your email to confirm your subscription.</p>
+                        </div>
+                    </div>
+                    <!-- Error message -->
+                    <div class="message error-message" v-if="!apicall_from_store_loading && errMsg && !showSuccMsg">
+                        <div class="message-icon error-icon">
+                        <!-- X Circle SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                        </div>
+                        <div class="message-text error-text">
+                        <!-- <h4>Subscription Failed</h4> -->
+                        <p>{{ errMsg }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -123,5 +180,6 @@ const openProductModal = (product)=>{
     </footer>
 </template>
 <style scoped lang="scss">
+@import '../sections/styles/newsletterSub.scss';
 @import './styles/footer1.scss';
 </style>

@@ -1,8 +1,11 @@
 <script setup>
 // comps
 import newsletter from '../components/sections/newsletterSub.vue'
+// store
+import { global_apihandler } from '../plugIn/axios/global-api-hadler';
 // vue
-import { ref, reactive } from 'vue'
+import { ref, reactive } from 'vue';
+
 
 const isSubmitting = ref(false)
 
@@ -75,9 +78,8 @@ const handleSubmit = async () => {
   isSubmitting.value = true
   
   try {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
+    const data = await global_apihandler('contactus-contact',{data: form})
+    console.log(data);
     // Reset form after successful submission
     Object.keys(form).forEach(key => form[key] = '')
     alert('Message sent successfully!')

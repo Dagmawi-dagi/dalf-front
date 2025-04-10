@@ -15,4 +15,7 @@ export default  {
     "confirmSub":{url:"/newsletter/confirmSub/:param1",method: 'patch',globally_res_feedback:{ err:true}},
     "unsub":{url:"/newsletter/unSub/:param1",method: 'patch'}
   },
+  "contactus":{
+    "contact":  { url:"/contactus",method: 'post',globally_res_feedback:{ err:true}  }
+  },
 }

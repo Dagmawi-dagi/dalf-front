@@ -2,7 +2,7 @@
 //utills
 import { serverUrl } from '../util/server';
 // assets
-import { aboutUs_p,aboutUsCardswithIcon,manager,customerReview } from '../assets/site_info_ref';
+import { aboutUs_p,aboutUsCardswithIcon,manager,customerReview,products } from '../assets/site_info_ref';
 // libs
 import { format } from 'date-fns';
 // comps 
@@ -29,6 +29,14 @@ const openBlogPostModal = (post)=>{
 }
 
 apicall_from_store( 'blog','blog-getList',{ queryObj : { page:page.value, perPage: perPage.value,sort: `-createdAt` }, onSucSaveTheJsonOn: 'blog_posts'})
+
+const openProductModal = (product)=>{
+    any_open_modal.value.bool = true
+    any_open_modal.value.id = 'productModal'
+    any_open_modal.value.AnythingTopass = product
+}
+
+
 </script>
 
 <template>
@@ -42,15 +50,15 @@ apicall_from_store( 'blog','blog-getList',{ queryObj : { page:page.value, perPag
                     <h1 class="brand-name">2001 G.C</h1>
                 </div>
                 <div class="product-image">
-                    <div class="img-container">
+                    <div class="img-container" @click="openProductModal(products[0])">
                         <div class="dots-pattern"></div>
                         <img src="../assets/pictures/Products/vodka.png" alt="desta uzo">
                     </div>
-                    <div class="img-container second">
+                    <div class="img-container second" @click="openProductModal(products[2])">
                         <div class="dots-pattern"></div>
                         <img src="../assets/pictures/Products/gin.png" alt="vodka">
                     </div>
-                    <div class="img-container three">
+                    <div class="img-container three" @click="openProductModal(products[1])">
                         <div class="dots-pattern"></div>
                         <img src="../assets/pictures/Products/uozo.png" alt="vodka">
                     </div>
@@ -467,6 +475,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
+    cursor: pointer;
     // Dots pattern
     .dots-pattern {
         position: absolute;
