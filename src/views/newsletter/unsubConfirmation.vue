@@ -9,7 +9,7 @@ const { apicall_from_store } = use_apicalls_from_store()
 const route = useRoute()
 
 onBeforeMount(()=>{
-  apicall_from_store('newsletter','newsletter-confirmSub',{  param1: route.params.id,data: {confirmed: false} })
+  apicall_from_store('newsletter','newsletter-unsub',{  param1: route.params.id,data: {confirmed: false} })
 })
 </script>
 
@@ -31,7 +31,7 @@ onBeforeMount(()=>{
         </p>
         
         <div class="resubscribe">
-          <a href="#" @click.prevent="$router.push('/')" class="link">DestaAlcohol&Liquor.com</a> 
+          <a href="/" @click.prevent="$router.push('/')" class="link">DestaAlcohol&Liquor.com</a> 
         </div>
       </div>
     </div>
