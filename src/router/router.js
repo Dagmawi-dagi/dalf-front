@@ -162,7 +162,7 @@ router.afterEach((to)=>{
   const { route_resovled } = storeToRefs(use_util_store())
   route_resovled.value = true
   // set the page title  
-  document.title = `Z | ${to.meta.title} `
+  document.title = `DALF | ${to.meta.title} `
   // end the progress bar
   progress_bar.done()
 })

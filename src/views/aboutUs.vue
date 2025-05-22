@@ -36,6 +36,10 @@ const openProductModal = (product)=>{
     any_open_modal.value.AnythingTopass = product
 }
 
+const getImageUrl = (imgName) => {
+    return new URL(`../assets/pictures/desta-logo.png`, import.meta.url).href
+}
+
 
 </script>
 
@@ -212,14 +216,14 @@ const openProductModal = (product)=>{
 
         <MazCarousel  :hide-scrollbar="false">
             <template #title>  <h4 class="maz-m-0" style="text-align: center;">Latest News</h4> </template>
-            <MazCard  v-for="(blog_post, i) in blog_posts" :key="i"  :images="[`${serverUrl}/${blog_post?.coverImg.split('-')[0]}/blog/${blog_post?.coverImg}`]" :gallery-height="200" style="min-width: 300px;" >
+            <MazCard  v-for="(blog_post, i) in blog_posts" :key="i"  :images="[`${serverUrl}/${blog_post?.coverImg.split('-')[0]}/blog/${blog_post?.coverImg}`]" :gallery-height="200" style="min-width: 300px; max-width: 400px;" >
                 <template #title>
                     <h5 style="margin: 0">  Celebrating 25 Years of Success: A Milestone of Growth and Gratitude </h5>
                     <span style="font-size: 12px; color: #666666;"> {{  format(blog_post.createdAt, 'MMMM dd,yyyy') }} </span>
                 </template>
                 <template #content>
                     <p class="maz-text-muted" style="margin: 0; margin-top: 10px">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has be...
+                        {{ blog_post.content_short }}
                         <a href="#" class="card__link"  @click.stop="openBlogPostModal(blog_post)">Read Full Article <span class="arrow">→</span></a>
                     </p>
                 </template>
@@ -234,7 +238,9 @@ const openProductModal = (product)=>{
 <style scoped lang="scss">
 @import '../components/sections/styles/homeabout.scss';
 
-
+.blogcard :deep(.m-gallery__item__image){
+    background-color: #152a4a !important;
+}
 .card__link {
   display: flex;
   align-items: center;

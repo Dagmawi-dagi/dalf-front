@@ -96,7 +96,8 @@ const onsearch  = ()=>{
         <div class="container" >
             <main class="main-content">
                 <!-- Blog posts -->
-                <MazCard  v-for="(blog_post,i) in blog_posts" :key="i" :images="[`${serverUrl}/${blog_post?.coverImg.split('-')[0]}/blog/${blog_post?.coverImg}`]" 
+                <MazCard  v-for="(blog_post,i) in blog_posts" :key="i" 
+                    :images="[`${serverUrl}/${blog_post?.coverImg.split('-')[0]}/blog/${blog_post?.coverImg}`]" 
                     :orientation="mobilePhone ? 'column' : 'row'  " 
                     :galleryWidth=" tablet ?  '250px': '300px' "
                     :galleryHeight="'250px'"
@@ -104,13 +105,11 @@ const onsearch  = ()=>{
                 >
                     <template #title>
                         <span  class="blog-card-date"> {{  format(blog_post.createdAt, 'MMMM dd,yyyy') }} </span>
-                        <!-- <h3 style="margin: 0; margin-bottom: 20px; font-weight: 500;"> {{ blog_post.title }} </h3> -->
-                        <h3 style="margin: 0; margin-bottom: 20px; font-weight: 500;"> Celebrating 25 Years of Success: A Milestone of Growth and Gratitude </h3>
+                        <h3 style="margin: 0; margin-bottom: 20px; font-weight: 500;"> {{ blog_post.title }} </h3>
                     </template>
                     <template #content>
                         <p class="maz-text-muted aaaaa" >
-                            <p>Reaching a 25-year anniversary is a remarkable achievement that signifies resilience, dedication, and continuous growth. Over the past two and a half decades, we have built a strong foundation,....</p>
-                            <!-- <div  class="quill-html-content" v-html="`${blog_post.content_short}`"> </div> -->
+                            <div  class="quill-html-content" v-html="`${blog_post.content_short}`"> </div>
                             <a href="#" class="card__link"  @click.stop="openBlogPostModal(blog_post)">Read Full Article <span class="arrow">→</span></a>
                          </p>
                     </template>
@@ -138,7 +137,7 @@ const onsearch  = ()=>{
                 <div class="widget">
                     <h3>Recent Posts</h3>
                     <div class="recent-posts">
-                        <MazCard   v-for="(blog_post,i) in recentPosts" :key="i"   
+                        <MazCard   v-for="(blog_post,i) in recentPosts" :key="i" 
                             @click.stop="openBlogPostModal(blog_post)"
                             :images="[`${serverUrl}/${blog_post?.coverImg.split('-')[0]}/blog/${blog_post?.coverImg}`]" 
                             :orientation="'row'" 
@@ -146,8 +145,7 @@ const onsearch  = ()=>{
                             class="blogcard recent">
                             <template #title>
                                 <span  class="blog-card-date" style="display: block;"> {{  format(blog_post.createdAt, 'MMMM dd,yyyy') }} </span>
-                                <!-- <h3 style="margin: 0; margin-bottom: 20px; font-weight: 500;"> {{ blog_post.title }} </h3> -->
-                                <p  class="blog-card-title"> Celebrating 25 Years of Success: A Milestone of Growth and Gratitude </p>
+                                <h3 style="margin: 0; margin-bottom: 20px; font-weight: 500;"> {{ blog_post.title }} </h3>
                             </template>
                         </MazCard>
                     </div>

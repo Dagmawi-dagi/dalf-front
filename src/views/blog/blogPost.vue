@@ -38,22 +38,17 @@ const openBlogPostModal = (post)=>{
                     <!-- Background dots layers -->
                     <div class="dots-pattern"></div>
                     <img class="header-image"  :src="`${serverUrl}/${blogPost?.coverImg.split('-')[0]}/blog/${blogPost?.coverImg}`" alt="blog_cover_image" >
-                <div class="cat"> 
-                    <span>news</span>
-                </div>
-
-                <img src="/src/assets/pictures/logo.jpg" alt="Daniel Mahendra profile picture" class="author-image">
+                    <div class="cat" > 
+                        <span v-for="(cat,i) in blogPost.category" :Key="i">{{ cat }}</span>
+                    </div>
+                <img src="/src/assets/pictures/logo.jpg" alt="desta logo" class="author-image">
             </div>
             
             <div class="content">
                 <div class="date">{{  format(new Date(blogPost.createdAt), 'MMMM dd,yyyy') }} </div>
-                <!-- <h3 class="blog-title">{{ blogPost.title }}</h3> -->
-                <h3 class="blog-title">Celebrating 25 Years of Success: A Milestone of Growth and Gratitude</h3>
+                <h3 class="blog-title">{{ blogPost.title }}</h3>
                 <div class="blog-content">
-                    <!-- <div  class="quill-html-content" v-html="`${blogPost.content}`"> </div> -->
-                    <p>Reaching a 25-year anniversary is a remarkable achievement that signifies resilience, dedication, and continuous growth. Over the past two and a half decades, we have built a strong foundation, embraced challenges, and evolved into what we are today. This celebration is not just about marking the years but about honoring the journey, the people who have contributed to our success, and the values that have guided us</p>
-                    <p>As we reflect on our journey, we acknowledge the unwavering support of our employees, partners, and customers. Their commitment and trust have played a pivotal role in shaping our accomplishments. From humble beginnings to significant milestones, every step has been a testament to teamwork and perseverance. This anniversary is a time to celebrate our achievements, express gratitude, and look forward to even greater success in the future.</p>
-                    <p>Looking ahead, we remain committed to innovation, excellence, and making a lasting impact. The next chapter promises new opportunities, fresh challenges, and continued growth. As we celebrate this special occasion, we reaffirm our dedication to the values that have brought us here. Thank you to everyone who has been part of this incredible journey—here’s to the next 25 years of success!</p>
+                    <div  class="quill-html-content" v-html="`${blogPost.content}`"> </div>
                 </div>
             </div>
         </div>

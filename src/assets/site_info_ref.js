@@ -47,100 +47,100 @@ export const  products = [
     {   
         name: "premier Vodka", 
         img: 'vodka.png',
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        description: "providing the first of its kind desta Vodka, it is ultra premium, specifically  distilled and excellently filtered Vodka,  Best test, perfection in every detail that excites and make you enjoy & feel your best!",
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Desta Uozo", 
         img: 'uozo.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Desta Gin", 
         img: 'gin.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Apple", 
         img: 'apple.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "superment", 
         img: 'superment.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "coffee", 
         img: 'coffee.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "aprative", 
         img: 'aprative.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "lime", 
         img: 'lime.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "zebib", 
-        img: 'Zebib.png',
+        img: 'zebib.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Ananas", 
         img: 'ananas.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "cognac", 
         img: 'cognac.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Alcohol", 
         img: 'alcohol 70.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "Alcohol", 
         img: 'alcohol 95.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
     {   
         name: "sanitizer", 
         img: 'sanitizer.png',
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae dolor officia delectus vitae reprehenderit, porro amet velit nulla, aperiam distinctio suscipit ullam ut sit at eos ipsa totam inventore animi.",
-        values: ['Alcohol: 5.0%','Carbohydrates: 3.2 g/100ml','sugar: 0.0 g/100ml','Protein: 0.0 g/100ml','Fat: 0.0 g/100ml','Energy: 176 kJ/100ml','vol 42 kcal/100ml'],
-        ingredient: ['Molaces','lorem']
+        values: ['Alcohol: 41%','sugar: 0.0 g/100ml','Energy: 176 kJ/100ml','Methanol: 450 mg/L','Ethanol Purity: 0.0 g/100ml','Microbial Safety: 0.0 g/100ml','Additives: None','Clarity: Crystal clear','Vol: 1lt, 700ml, 500ml'],
+        ingredient: ['lorem','lorem']
     },
 ]
 
@@ -168,7 +168,23 @@ export const communityImages = {
         {
             img: "test2.png",
             p: ["","",""]
-        }
+        },
+                {
+            img: "test2.png",
+            p: ["","",""]
+        },
+                {
+            img: "test2.png",
+            p: ["","",""]
+        },
+                {
+            img: "test2.png",
+            p: ["","",""]
+        },
+                {
+            img: "test2.png",
+            p: ["","",""]
+        },
     ],
     others: [
         {

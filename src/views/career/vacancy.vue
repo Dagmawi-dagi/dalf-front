@@ -31,7 +31,7 @@ apicall_from_store( 'vacancy','vacancy-getList',{ queryObj : { page:page.value, 
     <div class="job-container">
         <h3 class="job-header">Vacancy openings</h3>
         <div class="job-details" >
-            <h5 class="job-header" style="border: none;" v-if="!vacancies">No posted vacancy for now sorry!!!</h5>
+            <h5 class="job-header" style="border: none;" v-if="vacancies.length === 0">No posted vacancy for now!!!</h5>
             <!-- Position Section -->
             <div class="section" v-for="(vac,i) in vacancies">
                 <details>
@@ -39,7 +39,7 @@ apicall_from_store( 'vacancy','vacancy-getList',{ queryObj : { page:page.value, 
                         <div class="job-discriptions"> 
                             <h5 class="dis">Position: <span class="value"> {{ vac.position_name }} </span> </h5>
                             <h5 class="dis">company: <span class="value"> {{ vac.company }} </span> </h5>
-                            <h5 class="dis">location: <span class="value">  {{ JSON.parse(vac.locations).join() }} </span> </h5>
+                            <h5 class="dis">location: <span class="value">  {{ vac.locations.join() }} </span> </h5>
                             <h5 class="dis">deadline: <span class="value">  {{  format(new Date(vac.deadline), 'MMMM dd,yyyy') }} </span> </h5>
                             <h5 class="dis">salary: <span class="value"> {{ vac.salary }} </span> </h5>
                         </div>

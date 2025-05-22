@@ -17,6 +17,11 @@ onMounted(()=>{
     gsap.fromTo('.pro-img',{  scale: 0},{ scale: 1.1, direction: 1 })
 })
 
+
+  const getImageUrl = (imgName) => {
+    return new URL(`../../assets/pictures/Products/${imgName}`, import.meta.url).href
+  }
+
 </script>
 
 <template>
@@ -25,7 +30,7 @@ onMounted(()=>{
             <div class="image-container">
                 <!-- Background dots layers -->
                 <div class="dots-pattern"></div>
-                <img class="pro-img" :src="`/src/assets/pictures/Products/${productData.img}`" alt="Heineken Beer Bottle">
+                <img class="pro-img" :src="getImageUrl(productData.img)" alt="Heineken Beer Bottle">
             </div>
             <div class="content-container">
                 <h1 class="product-title">

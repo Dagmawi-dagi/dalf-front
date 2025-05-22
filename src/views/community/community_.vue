@@ -14,8 +14,8 @@ import { onMounted } from 'vue';
 const { show_global_vueEasyLightbox } = use_light_box()
 const showimg = (imgRef,isArr,index)=>{
     let imges;
-    if(isArr) imges =  imgRef.map(i=>{ return `/src/assets/pictures/community/${i}` })
-    else imges = `/src/assets/pictures/community/${imgRef}`
+    if(isArr) imges =  imgRef.map(i=>{ return new URL(`../../assets/pictures/community/${i}`, import.meta.url).href })
+    else imges = new URL(`../../assets/pictures/community/${imgRef}`, import.meta.url).href
     show_global_vueEasyLightbox(isArr ? null : imges, isArr ? imges:null , isArr ? index : 0)
 }
 
@@ -56,6 +56,10 @@ onMounted(()=>{
     document.querySelectorAll('.community-item').forEach(el => observer.observe(el));
 })
 
+const getImageUrl = (imgName) => {
+return new URL(`../../assets/pictures/community/${imgName}`, import.meta.url).href
+}
+
 
 </script>
 
@@ -70,9 +74,9 @@ onMounted(()=>{
                     <img @click="showimg(communityImages.sport.map(spo=> spo.img),true,0)" src="/src/assets/pictures/community/test.jpg" style="width: 100%; object-fit: cover; cursor: pointer;" >
                     <MazCarousel class="MazCarouselContainer" hideScrollbar>
                         <img  v-for="(data, i) in communityImages.sport" :key="i"  class="tambnail-image"
-                            :src="`/src/assets/pictures/community/${data.img}`" 
+                            :src="getImageUrl(data.img)" 
                             @click="showimg(communityImages.sport.map(d=> d.img),true,i)"
-                        >
+                            >
                     </MazCarousel>
                 </div>
                 <div class="community-content">
@@ -85,7 +89,7 @@ onMounted(()=>{
 
             <!-- other community work -->
             <article class="community-item" v-for="(data,i) in communityImages.others" :key="i" >
-                <img loading="lazy" class="community-image" @click="showimg(data.img,false,0)" :src="`/src/assets/pictures/community/${data.img}`">
+                <img loading="lazy" class="community-image" @click="showimg(data.img,false,0)" :src="getImageUrl(data.img)">
                 <div class="community-content">
                     <h2 class="community-title">7 LEVELS OF community</h2>
                     <p class="community-text">
